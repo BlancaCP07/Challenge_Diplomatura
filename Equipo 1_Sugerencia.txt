@@ -1,0 +1,12 @@
+Equipo 1
+
+Sugerencia de Colección:
+•	Booking
+•	Lista existente de booking
+•	Crear un Booking
+•	Lista de estaciones
+•	Viajes disponibles
+
+
+Dentro de cada punto hacer aserciones , scripts y usar variables
+
