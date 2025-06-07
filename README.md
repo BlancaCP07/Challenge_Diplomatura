@@ -3,19 +3,21 @@ Este es el Repositorio del Challenger - Diplomatura
 
 CHALLENGE FINAL 
 
-1.- Lee todos los documentos
+1.- Busca la rama segun tu número de equipo 
 
-2.- Sigue todas las indicaciones
+2.- Lee todos los documentos y Analizalos en equipo
 
-3.- Prepara muy bien tu clase
+3.- Sigue todas las indicaciones
 
-4.- OBLIGATORIO: CÁMARA PARA TODOS LOS INTEGRANTES
+4.- Prepara muy bien tu clase
 
-5.- OBLIGATORIO : TODOS LOS INTEGRANTES DEBEN PARTICIPAR
+5.- OBLIGATORIO: CÁMARA PARA TODOS LOS INTEGRANTES
 
-6.- La exposición debe durar 8 minutos Máximo
+6.- OBLIGATORIO : TODOS LOS INTEGRANTES DEBEN PARTICIPAR
 
-7.- Elabora una presentación muy completa, con todas las herramientas que utilizaste 
+7.- La exposición debe durar 8 minutos Máximo
+
+8.- Elabora una presentación muy completa, con todas las herramientas que utilizaste 
 
 
 
