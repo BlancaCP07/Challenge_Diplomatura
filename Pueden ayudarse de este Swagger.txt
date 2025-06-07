@@ -1,1 +1,0 @@
-https://api.crossref.org/swagger-ui/index.html
