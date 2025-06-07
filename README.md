@@ -1,5 +1,8 @@
 # Challenge_Diplomatura
-Este es el Repositorio del Challenger - Diplomatura
+Este es el Repositorio del Challenge - Diplomatura
+
+![image](https://github.com/user-attachments/assets/6b56d950-1dc2-4a89-8541-bfd9077662ef)
+
 
 CHALLENGE FINAL 
 
