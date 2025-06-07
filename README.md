@@ -1,7 +1,7 @@
 # Challenge_Dipomatura
 Este es el Repositorio del Challenger - Diplomatura
 
-Este es el Repositorio del Challenger - Diplomatura
+Proyecto: MEDIA WIKI
 
 AQUI TIENEN LA LIGA DONDE ENCONTRARÁN TODA LA DOCUMENTACIÓN DE LA API << POR FAVOR REVISENLA >>
 
