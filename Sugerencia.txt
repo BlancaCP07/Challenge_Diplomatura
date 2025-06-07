@@ -1,0 +1,85 @@
+{
+  "info": {
+    "name": "MediaWiki API Básica",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Obtener contenido de una página",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://en.wikipedia.org/w/api.php?action=query&titles=Argentina&prop=revisions&rvprop=content&format=json",
+          "protocol": "https",
+          "host": ["en", "wikipedia", "org"],
+          "path": ["w", "api.php"],
+          "query": [
+            { "key": "action", "value": "query" },
+            { "key": "titles", "value": "Argentina" },
+            { "key": "prop", "value": "revisions" },
+            { "key": "rvprop", "value": "content" },
+            { "key": "format", "value": "json" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar páginas por palabra clave",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software&format=json",
+          "protocol": "https",
+          "host": ["en", "wikipedia", "org"],
+          "path": ["w", "api.php"],
+          "query": [
+            { "key": "action", "value": "query" },
+            { "key": "list", "value": "search" },
+            { "key": "srsearch", "value": "software" },
+            { "key": "format", "value": "json" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Parsear wikitexto a HTML",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://en.wikipedia.org/w/api.php?action=parse&page=Argentina&format=json",
+          "protocol": "https",
+          "host": ["en", "wikipedia", "org"],
+          "path": ["w", "api.php"],
+          "query": [
+            { "key": "action", "value": "parse" },
+            { "key": "page", "value": "Argentina" },
+            { "key": "format", "value": "json" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Obtener historial de ediciones",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://en.wikipedia.org/w/api.php?action=query&titles=Argentina&prop=revisions&rvlimit=5&format=json",
+          "protocol": "https",
+          "host": ["en", "wikipedia", "org"],
+          "path": ["w", "api.php"],
+          "query": [
+            { "key": "action", "value": "query" },
+            { "key": "titles", "value": "Argentina" },
+            { "key": "prop", "value": "revisions" },
+            { "key": "rvlimit", "value": "5" },
+            { "key": "format", "value": "json" }
+          ]
+        }
+      }
+    }
+  ]
+}
