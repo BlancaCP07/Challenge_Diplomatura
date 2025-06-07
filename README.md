@@ -1,4 +1,12 @@
 
+Challenge_Dipomatura
+Este es el Repositorio del Challenger - Diplomatura
+
+Proyecto: API CROSSREF
+
+AQUI TIENEN LA LIGA DONDE ENCONTRARÁN TODA LA DOCUMENTACIÓN DE LA API << POR FAVOR REVISENLA >>
+
+
 https://www.crossref.org/documentation/retrieve-metadata/rest-api/
 
 
