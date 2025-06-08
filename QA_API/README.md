@@ -1,11 +1,2 @@
-# Challenge_Diplomatura
-Este es el Repositorio del Challenger - Diplomatura
 
-PROYECTO: TRAIN TRAVEL
-
-AQUI TIENEN LA LIGA DONDE ENCONTRARÁN TODA LA DOCUMENTACIÓN DE LA API
-<< POR FAVOR REVISENLA >>
-https://github.com/bump-sh-examples/train-travel-api
-
-![image](https://github.com/user-attachments/assets/61e3a4aa-45f6-4cbd-a58f-465877454b91)
-
+![image](https://github.com/user-attachments/assets/ad88c58c-4958-4ab4-a9bb-b3cffe0dbacc)
