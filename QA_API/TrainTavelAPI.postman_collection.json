@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "d1537a91-03b0-4bcb-827e-c27d6110e094",
+		"name": "Train Travel API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22436216",
+		"_collection_link": "https://www.postman.com/warped-moon-978318/workspace/last-challenge-equipo-1/collection/22436216-d1537a91-03b0-4bcb-827e-c27d6110e094?action=share&source=collection_link&creator=22436216"
+	},
+	"item": [
+		{
+			"name": "Estaciones",
+			"item": [
+				{
+					"name": "Listar Estaciones",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200 OK\", () => {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"La respuesta contiene una lista de estaciones\", () => {\r",
+									"  const json = pm.response.json();\r",
+									"  pm.expect(json).to.have.property(\"data\");\r",
+									"  pm.expect(json.data).to.be.an(\"array\").that.is.not.empty;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Cada estación tiene id, nombre y dirección\", () => {\r",
+									"  const estaciones = pm.response.json().data;\r",
+									"  estaciones.forEach(estacion => {\r",
+									"    pm.expect(estacion).to.have.property(\"id\");\r",
+									"    pm.expect(estacion).to.have.property(\"name\");\r",
+									"    pm.expect(estacion).to.have.property(\"address\");\r",
+									"  });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Cada valor de id, nombre y dirección es un string\", () => {\r",
+									"  const estaciones = pm.response.json().data;\r",
+									"\r",
+									"  estaciones.forEach(estacion => {\r",
+									"    pm.expect(estacion.id).to.be.a(\"string\");\r",
+									"    pm.expect(estacion.name).to.be.a(\"string\");\r",
+									"    pm.expect(estacion.address).to.be.a(\"string\");\r",
+									"  });\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Estacion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let stationName = \"Paris\"\r",
+									"\r",
+									"pm.test(\"Status 200 OK\", () => {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"La respuesta contiene una lista de estaciones\", () => {\r",
+									"  const json = pm.response.json();\r",
+									"  pm.expect(json).to.have.property(\"data\");\r",
+									"  pm.expect(json.data).to.be.an(\"array\").that.is.not.empty;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body contiene el nombre buscado\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.environment.get(stationName));\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stations?search={{stationName}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "{{stationName}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda de viajes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let json = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Código 200 OK\", () => {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Respuesta contiene viajes\", () => {\r",
+									"  pm.expect(json).to.have.property(\"data\");\r",
+									"  pm.expect(json.data).to.be.an(\"array\").that.is.not.empty;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Cada viaje tiene campos válidos\", () => {\r",
+									"  json.data.forEach(viaje => {\r",
+									"    pm.expect(viaje).to.have.property(\"id\");\r",
+									"    pm.expect(viaje).to.have.property(\"departure_time\");\r",
+									"    pm.expect(viaje).to.have.property(\"arrival_time\");\r",
+									"    pm.expect(viaje).to.have.property(\"price\");\r",
+									"  });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/trips?origin={{originStationIdBerlin}}&destination={{destStationIdParis}}&date={{tripDate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"trips"
+							],
+							"query": [
+								{
+									"key": "origin",
+									"value": "{{originStationIdBerlin}}"
+								},
+								{
+									"key": "destination",
+									"value": "{{destStationIdParis}}"
+								},
+								{
+									"key": "date",
+									"value": "{{tripDate}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar Viaje (Bicicleta/Perros)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200 OK\", () => {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Se reciben viajes filtrados\", () => {\r",
+									"  pm.expect(viajes).to.be.an(\"array\").that.is.not.empty;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Todos los viajes permiten bicicletas y perros\", () => {\r",
+									"  viajes.forEach(viaje => {\r",
+									"    pm.expect(viaje.bicycles_allowed).to.eql(true);\r",
+									"    pm.expect(viaje.dogs_allowed).to.eql(true);\r",
+									"  });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/trips?origin={{originStationIdBerlin}}&destination={{destStationIdParis}}&date={{tripDate}}&bicycles_allowed=true&dogs_allowed=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"trips"
+							],
+							"query": [
+								{
+									"key": "origin",
+									"value": "{{originStationIdBerlin}}"
+								},
+								{
+									"key": "destination",
+									"value": "{{destStationIdParis}}"
+								},
+								{
+									"key": "date",
+									"value": "{{tripDate}}"
+								},
+								{
+									"key": "bicycles_allowed",
+									"value": "true"
+								},
+								{
+									"key": "dogs_allowed",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservas",
+			"item": [
+				{
+					"name": "Listar Reservas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/bookings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear una reserva",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let json = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Código 201 Created\", () => {\r",
+									"  pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"La reserva se creó correctamente\", () => {\r",
+									"  pm.expect(json).to.have.property(\"id\");\r",
+									"  pm.expect(json.trip_id).to.eql(\"ea399ba1-6d95-433f-92d1-83f67b775594\");\r",
+									"  pm.expect(json.passenger_name).to.eql(\"Juan QA\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"trip_id\": \"ea399ba1-6d95-433f-92d1-83f67b775594\",\r\n  \"passenger_name\": \"Juan QA\",\r\n  \"has_bicycle\": true,\r\n  \"has_dog\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/bookings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pagar Reserva",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200 OK\", () => {\r",
+									"  pm.expect(200).to.include(pm.response.code);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 49.99,\r\n  \"currency\": \"gbp\",\r\n  \"source\": {\r\n    \"object\": \"card\",\r\n    \"name\": \"Juan QA\",\r\n    \"number\": \"4242424242424242\",\r\n    \"cvc\": \"123\",\r\n    \"exp_month\": 12,\r\n    \"exp_year\": 2025,\r\n    \"address_country\": \"gb\"\r\n  }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/bookings/9580eb5c-270d-4957-bf18-6fc37ded43d1/payment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"bookings",
+								"9580eb5c-270d-4957-bf18-6fc37ded43d1",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Reserva [Limitado]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Se eliminó la reserva, status code 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"trip_id\": \"ea399ba1-6d95-433f-92d1-83f67b775594\",\r\n  \"passenger_name\": \"Juan QA\",\r\n  \"has_bicycle\": true,\r\n  \"has_dog\": false\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/bookings/a432bfaf-9a5e-43f0-9cbe-401f5cc6381e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"bookings",
+								"a432bfaf-9a5e-43f0-9cbe-401f5cc6381e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,106 @@
+Lanzada por el usuario Fede
+Running as SYSTEM
+Ejecutando. en el espacio de trabajo C:\Users\julio\.jenkins\workspace\LastChallenge_Equipo1
+[LastChallenge_Equipo1] $ cmd /c call C:\Users\julio\AppData\Local\Temp\jenkins8789632959303668923.bat
+
+C:\Users\julio\.jenkins\workspace\LastChallenge_Equipo1>echo "Ejecutando colección de Postman con Newman..." 
+"Ejecutando colección de Postman con Newman..."
+
+C:\Users\julio\.jenkins\workspace\LastChallenge_Equipo1>cd C:\Users\julio\OneDrive\Desktop\Git Descarga\mindHub\Challenge_Diplomatura\QA_API 
+
+C:\Users\julio\OneDrive\Desktop\Git Descarga\mindHub\Challenge_Diplomatura\QA_API>newman run https://api.postman.com/collections/22436216-d1537a91-03b0-4bcb-827e-c27d6110e094?access_key=PMAT-XXXXXXXXXXXXXXX --environment Estaciones.postman_environment.json --suppress-exit-code 
+newman
+
+Train Travel API
+
+□ Estaciones
+└ Listar Estaciones
+  GET https://try.microcks.io/rest/Train+Travel+API/1.0.0/stations [200 OK, 1.16kB, 1151ms]
+  √  Status 200 OK
+  √  La respuesta contiene una lista de estaciones
+  √  Cada estación tiene id, nombre y dirección
+  √  Cada valor de id, nombre y dirección es un string
+
+└ Buscar Estacion
+  GET https://try.microcks.io/rest/Train+Travel+API/1.0.0/stations?search=Paris [200 OK, 666B, 272ms]
+  √  Status 200 OK
+  √  La respuesta contiene una lista de estaciones
+  1. Body contiene el nombre buscado
+
+└ Busqueda de viajes
+  GET https://try.microcks.io/rest/Train+Travel+API/1.0.0/trips?origin=efdbb9d1-02c2-4bc3-afb7-6788d8782b1e&destination=b2e783e1-c824-4d63-b37a-d8d698862f1d&date=2024-02-01T09:00:00Z [200 OK, 1.58kB, 273ms]
+  √  Código 200 OK
+  √  Respuesta contiene viajes
+  √  Cada viaje tiene campos válidos
+
+└ Filtrar Viaje (Bicicleta/Perros)
+  GET https://try.microcks.io/rest/Train+Travel+API/1.0.0/trips?origin=efdbb9d1-02c2-4bc3-afb7-6788d8782b1e&destination=b2e783e1-c824-4d63-b37a-d8d698862f1d&date=2024-02-01T09:00:00Z&bicycles_allowed=true&dogs_allowed=true [200 OK, 1.58kB, 273ms]
+  √  Status 200 OK
+  2. Se reciben viajes filtrados
+  3. Todos los viajes permiten bicicletas y perros
+
+□ Reservas
+└ Listar Reservas
+  GET https://try.microcks.io/rest/Train+Travel+API/1.0.0/bookings [200 OK, 1.08kB, 273ms]
+  √  Status code is 200
+
+└ Crear una reserva
+  POST https://try.microcks.io/rest/Train+Travel+API/1.0.0/bookings [201 Created, 963B, 273ms]
+  √  Código 201 Created
+  √  La reserva se creó correctamente
+
+└ Pagar Reserva
+  POST https://try.microcks.io/rest/Train+Travel+API/1.0.0/bookings/9580eb5c-270d-4957-bf18-6fc37ded43d1/payment [404 Not Found, 638B, 269ms]
+  4. Status 200 OK
+
+└ Eliminar Reserva [Limitado]
+  DELETE https://try.microcks.io/rest/Train+Travel+API/1.0.0/bookings/a432bfaf-9a5e-43f0-9cbe-401f5cc6381e [404 Not Found, 638B, 271ms]
+  5. Se eliminó la reserva, status code 204
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                   8 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                   8 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   2 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                  18 │                   5 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 3.7s                                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 3.09kB (approx)                                │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 381ms [min: 269ms, max: 1151ms, s.d.: 290ms] │
+└─────────────────────────────────────────────────────────────────────┘
+
+[31m  # [39m[31m failure        [39m[31m detail                                                                                                                                                                          [39m
+[90m    [39m[90m                [39m[90m                                                                                                                                                                                 [39m
+ 1.  AssertionError  Body contiene el nombre buscado                                                                                                                                                 
+                     expected '{"data":["ref_1"]}' to include undefined                                                                                                                              
+                     at assertion:2 in test-script                                                                                                                                                   
+                     inside "Estaciones / Buscar Estacion"                                                                                                                                           
+[90m    [39m[90m                [39m[90m                                                                                                                                                                                 [39m
+ 2.  ReferenceError  Se reciben viajes filtrados                                                                                                                                                     
+                     viajes is not defined                                                                                                                                                           
+                     at assertion:1 in test-script                                                                                                                                                   
+                     inside "Estaciones / Filtrar Viaje (Bicicleta/Perros)"                                                                                                                          
+[90m    [39m[90m                [39m[90m                                                                                                                                                                                 [39m
+ 3.  ReferenceError  Todos los viajes permiten bicicletas y perros                                                                                                                                   
+                     viajes is not defined                                                                                                                                                           
+                     at assertion:2 in test-script                                                                                                                                                   
+                     inside "Estaciones / Filtrar Viaje (Bicicleta/Perros)"                                                                                                                          
+[90m    [39m[90m                [39m[90m                                                                                                                                                                                 [39m
+ 4.  AssertionError  Status 200 OK                                                                                                                                                                   
+                     the given combination of arguments (number and number) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a number 
+                     at assertion:0 in test-script                                                                                                                                                   
+                     inside "Reservas / Pagar Reserva"                                                                                                                                               
+[90m    [39m[90m                [39m[90m                                                                                                                                                                                 [39m
+ 5.  AssertionError  Se eliminó la reserva, status code 204                                                                                                                                          
+                     expected response to have status code 204 but got 404                                                                                                                           
+                     at assertion:0 in test-script                                                                                                                                                   
+                     inside "Reservas / Eliminar Reserva [Limitado]"                                                                                                                                 
+Finished: SUCCESS
