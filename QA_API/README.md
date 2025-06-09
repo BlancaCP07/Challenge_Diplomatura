@@ -12,13 +12,47 @@
 <h2>Casos Ejecutados</h2>
 <ul>
   <li>🧪Listar Estaciones</li>
+    <ul>
+      <li>✅Status 200 OK</li>
+      <li>✅La respuesta contiene una lista de estaciones</li>
+      <li>✅Cada estación tiene id, nombre y dirección</li>
+      <li>✅Cada valor de id, nombre y dirección es un string</li>
+    </ul>
   <li>🧪Buscar Estacion</li>
+    <ul>
+      <li>✅Status 200 OK</li>
+      <li>✅La respuesta contiene una lista de estaciones</li>
+      <li>❌Body contiene el nombre buscado</li>
+    </ul>
   <li>🧪Busqueda de viajes</li>
+    <ul>
+      <li>✅Status 200 OK</li>
+      <li>✅Respuesta contiene viajes</li>
+      <li>✅Cada viaje tiene campos válidos</li>
+    </ul>
   <li>🧪Filtrar Viaje</li>
+    <ul>
+      <li>✅Status 200 OK</li>
+      <li>❌Se reciben viajes filtrados</li>
+      <li>❌Todos los viajes permiten bicicletas y perros</li>
+    </ul>
   <li>🧪Listar Reservas</li>
+    <ul>
+      <li>✅Status 200 OK</li>
+    </ul>
   <li>🧪Crear una reserva</li>
+    <ul>
+      <li>✅Status 201 OK</li>
+      <li>✅La reserva se creó correctamente</li>
+    </ul>
   <li>🧪Pagar una reserva</li>
+    <ul>
+      <li>❌Status 200 OK</li>
+    </ul>
   <li>🧪Eliminar reserva</li>
+    <ul>
+      <li>❌Status 204 OK</li>
+    </ul>
 </ul>
 <hr>
 <h2>Trabajo desde POSTMAN</h2>
