@@ -62,23 +62,29 @@
 <p>Como se explica en "Casos Ejecutados", en la siguiente imagen se muestran los request utilizados</p>
 *imagen de request
 <p>Punto desde donde se inicio la ejecucion</p>
-*imagen del run
+![image](https://github.com/user-attachments/assets/f0e339e6-49fe-4938-81f8-9ddcc7b7b9bd)
+
 <p>Casos que pasaron/fallaron</p>
 🗂️PostmanRunner 
 <p>Variables utilizadas para las ejecuciones</p>
-*imagen variables
+![image](https://github.com/user-attachments/assets/52d7d323-bab1-4a90-8a9d-4e76311d66a7)
 <hr>
 <h2>Trabajo desde NEWMAN</h2>
 <p>Para las ejecuciones desde Newman se utilizó la ejecución por medio del "Via API", ademas se realizo la descarga del ambiente de variables para que los request se ejecuten satisfactoriamente</p>
 <p>Obtención "Via API"</p>
-*imagen via api
+![image](https://github.com/user-attachments/assets/28d7f0ec-50c3-4c4a-8bbd-5b210dfd36e4)<br>
+![image](https://github.com/user-attachments/assets/59ec63e3-503b-4a81-9157-a1d9fddee0b8)<br>
+![image](https://github.com/user-attachments/assets/9ce6feba-22e4-49c3-80c3-8ddef40ec8b8)<br>
+<br>
 <p>Comando a ejecutar: newman run https://api.postman.com/collections/22436216-d1537a91-03b0-4bcb-827e-c27d6110e094?access_key=PMAT-************************** --environment Estaciones.postman_environment.json -r htmlextra</p>
 <p>Resultado de las ejecuciones</p>
 🗂️NewmanRunner 
 <hr>
 <h2>Trabajo desde Jenkins</h2>
 <p>Se realizó la creación del job correspondiente para la ejecución</p>
-*imagen del job
+
+![image](https://github.com/user-attachments/assets/0748ae3b-b3d3-4a8d-843f-8244270d50f5)
+
 <p>En el momento de determinar los pasos de ejecución se coloca : 
 
 echo "Ejecutando colección de Postman con Newman..."
