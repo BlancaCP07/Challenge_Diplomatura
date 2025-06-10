@@ -9,6 +9,7 @@
 ├── Estaciones.postman_environment.json               <i>(Json del Api Testeado)</i><br>
 ├── README.md                                         <i>(Este archivo)</i><br>
 └── TrainTavelAPI.postman_collection.json / etc.       <i>(Json de las Variables)</i><br>
+🗂️Zephyr/<br>      <i> (Reportes de Zephyr)</i><br>
 <h2>Casos Ejecutados</h2>
 <ul>
   <li>🧪Listar Estaciones</li>
