@@ -36,7 +36,7 @@ https://actividad4.atlassian.net/jira/software/projects/LC/boards/269
 
  <h1 style="text-align: center;">Pantallas de la App</h1>
   <div class="gallery">
-    <img src="pantalla1.png" alt="Pantalla 1" />
+    <img src="PrototipoPantallas/1 - Inicio.jpg" alt="Pantalla 1" />
     <img src="pantalla2.png" alt="Pantalla 2" />
     <img src="pantalla3.png" alt="Pantalla 3" />
     <img src="pantalla4.png" alt="Pantalla 4" />
