@@ -39,13 +39,13 @@ https://actividad4.atlassian.net/jira/software/projects/LC/boards/269
 
 <table>
   <tr>
-    <td><img src="PrototipoPantallas/1 - Inicio.jpg" height="200"/></td>
-    <td><img src="PrototipoPantallas/2 - Datos Personales.jpg" height="200"/></td>
-    <td><img src="PrototipoPantallas/3 - Consulta de viajes.jpg" height="200"/></td>
+    <td><img src="PrototipoPantallas/1 - Inicio.jpg" height="400"/></td>
+    <td><img src="PrototipoPantallas/2 - Datos Personales.jpg" height="400"/></td>
+    <td><img src="PrototipoPantallas/3 - Consulta de viajes.jpg" height="400"/></td>
   </tr>
   <tr>
-    <td><img src="PrototipoPantallas/4 -  Seleccion de Origen y Destino.jpg" height="200"/></td>
-    <td><img src="PrototipoPantallas/5 - Opciones de viajes.jpg" height="200"/></td>
-    <td><img src="PrototipoPantallas/6 - Pasaje - Generacion Qr.jpg" height="200"/></td>
+    <td><img src="PrototipoPantallas/4 -  Seleccion de Origen y Destino.jpg" height="400"/></td>
+    <td><img src="PrototipoPantallas/5 - Opciones de viajes.jpg" height="400"/></td>
+    <td><img src="PrototipoPantallas/6 - Pasaje - Generacion Qr.jpg" height="400"/></td>
   </tr>
 </table>
