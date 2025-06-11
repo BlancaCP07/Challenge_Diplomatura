@@ -31,3 +31,15 @@ https://actividad4.atlassian.net/jira/software/projects/LC/boards/269
 ├── Req_NuestraTravelApp.pdf                         <i>  (Requerimientos de la APP)</i><br>
 ├── README.md                                        <i>  (Este archivo)</i><br>
 └── train-travel-api-openapi-source.jso              <i>  (Json modelo)</i><br>
+
+<br>
+
+ <h1 style="text-align: center;">Pantallas de la App</h1>
+  <div class="gallery">
+    <img src="pantalla1.png" alt="Pantalla 1" />
+    <img src="pantalla2.png" alt="Pantalla 2" />
+    <img src="pantalla3.png" alt="Pantalla 3" />
+    <img src="pantalla4.png" alt="Pantalla 4" />
+    <img src="pantalla5.png" alt="Pantalla 5" />
+    <img src="pantalla6.png" alt="Pantalla 6" />
+  </div>
