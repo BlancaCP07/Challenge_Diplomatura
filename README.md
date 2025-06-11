@@ -1,9 +1,9 @@
 <h1>Documentación sobre la API del challenge</h1>
-<h1>Proyecto TRAINTRAVELAPP</h1>
+<h1>Proyecto TRAINTRAVELAPP  # Challenge_Diplomatura</h1>
 
 <hr>
 
-# Challenge_Diplomatura
+
 Este es el Repositorio del Challenger - Diplomatura
 
 
