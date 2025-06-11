@@ -22,6 +22,12 @@ https://actividad4.atlassian.net/jira/software/projects/LC/boards/269
 <h2>Estructura de Documentacion</h2>
 
 🗂️Challenge_Diplomatura/<br>
-├── 🗂️PrototipoPantallas                           <i> (Prototipos de Pantallas)</i><br>
-├── 🗂️QA_API                                       <i> (Ejercicios Postman, Newman y Jenkins)</i><br>
-└── 🗂️Zephyr                                       <i> (Reporteria de Zephyr)</i><br>
+├── 🗂️PrototipoPantallas                            <i> (Prototipos de Pantallas)</i><br>
+├── 🗂️QA_API                                        <i> (Ejercicios Postman, Newman y Jenkins)</i><br>
+├── 🗂️Zephyr                                        <i> (Reporteria de Zephyr)</i><br>
+├── Equipo 1_Sugerencia.txt                          <i> (Sugerencias para armado Json)</i><br>
+├── Equipo1.png                                      <i> (Imagen: Integrantes de grupo)</i><br>
+├── Instrucciones_ChallengerFinal.pdf                <i> (Instrucciones del trabajo)</i><br>
+├── Req_NuestraTravelApp.pdf                         <i> (Requerimientos de la APP)</i><br>
+├── README.md                                        <i>(Este archivo)</i><br>
+└── train-travel-api-openapi-source.jso              <i>(Json modelo)</i><br>
