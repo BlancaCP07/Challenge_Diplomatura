@@ -1,34 +1,3 @@
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 20px;
-      background: #f0f2f5;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 400px; /* Altura fija para uniformidad */
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      background: white;
-    }
-
-    @media (max-width: 600px) {
-      .gallery img {
-        height: 300px;
-      }
-    }
-  </style>
-
 <h1>Proyecto TRAINTRAVELAPP  # Challenge_Diplomatura</h1>
 <h1>Documentación sobre el challenge</h1>
 
@@ -66,11 +35,17 @@ https://actividad4.atlassian.net/jira/software/projects/LC/boards/269
 <br>
 
  <h1 style="text-align: center;">Pantallas de la App</h1>
-  <div class="gallery">
-    <img src="PrototipoPantallas/1 - Inicio.jpg" alt="Pantalla 1" />
-    <img src="PrototipoPantallas/2 - Datos Personales.jpg" alt="Pantalla 2" />
-    <img src="PrototipoPantallas/3 - Consulta de viajes.jpg" alt="Pantalla 3" />
-    <img src="PrototipoPantallas/4 -  Seleccion de Origen y Destino.jpg" alt="Pantalla 4" />
-    <img src="PrototipoPantallas/5 - Opciones de viajes.jpg" alt="Pantalla 5" />
-    <img src="PrototipoPantallas/6 - Pasaje - Generacion Qr.jpg" alt="Pantalla 6" />
-  </div>
+ 
+
+<table>
+  <tr>
+    <td><img src="PrototipoPantallas/1 - Inicio.jpg" height="200"/></td>
+    <td><img src="PrototipoPantallas/2 - Datos Personales.jpg" height="200"/></td>
+    <td><img src="PrototipoPantallas/3 - Consulta de viajes.jpg" height="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="PrototipoPantallas/4 -  Seleccion de Origen y Destino.jpg" height="200"/></td>
+    <td><img src="PrototipoPantallas/5 - Opciones de viajes.jpg" height="200"/></td>
+    <td><img src="PrototipoPantallas/6 - Pasaje - Generacion Qr.jpg" height="200"/></td>
+  </tr>
+</table>
