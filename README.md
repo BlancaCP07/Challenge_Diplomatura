@@ -39,15 +39,13 @@ https://actividad4.atlassian.net/jira/software/projects/LC/boards/269
 
 <table>
   <tr>
-
-   <img src="..." width="150" height="300"/>
-    <td><img src="PrototipoPantallas/1 - Inicio.jpg" width="150" height="300"/></td>
-    <td><img src="PrototipoPantallas/2 - Datos Personales.jpg" width="150" height="300"/></td>
-    <td><img src="PrototipoPantallas/3 - Consulta de viajes.jpg" width="150" height="300"/></td>
+    <td><img src="PrototipoPantallas/1 - Inicio.jpg" width="250" height="500"/></td>
+    <td><img src="PrototipoPantallas/2 - Datos Personales.jpg" width="250" height="500"/></td>
+    <td><img src="PrototipoPantallas/3 - Consulta de viajes.jpg" width="250" height="500"/></td>
   </tr>
   <tr>
-    <td><img src="PrototipoPantallas/4 -  Seleccion de Origen y Destino.jpg" width="150" height="300"/></td>
-    <td><img src="PrototipoPantallas/5 - Opciones de viajes.jpg" width="150" height="300"/></td>
-    <td><img src="PrototipoPantallas/6 - Pasaje - Generacion Qr.jpg" width="150" height="300"/></td>
+    <td><img src="PrototipoPantallas/4 -  Seleccion de Origen y Destino.jpg" width="250" height="500"/></td>
+    <td><img src="PrototipoPantallas/5 - Opciones de viajes.jpg" width="250" height="500"/></td>
+    <td><img src="PrototipoPantallas/6 - Pasaje - Generacion Qr.jpg" width="250" height="500"/></td>
   </tr>
 </table>
