@@ -5,10 +5,10 @@
 🗂️QA_API/<br>
 ├── 🗂️JenkinsRunner                                  <i> (Evidencia de ejecuciones Jenkins)</i><br>
 ├── 🗂️NewmanRunner                                 <i> (Evidencia de ejecuciones Newman)</i><br>
-├── 🗂️PostmanRunner                                 <i>(Evidencia de ejecuciones Postman)</i><br>
-├── Estaciones.postman_environment.json               <i>(Json del Api Testeado)</i><br>
-├── README.md                                         <i>(Este archivo)</i><br>
-└── TrainTavelAPI.postman_collection.json / etc.       <i>(Json de las Variables)</i><br>
+├── 🗂️PostmanRunner                                 <i> (Evidencia de ejecuciones Postman)</i><br>
+├── Estaciones.postman_environment.json               <i> (Json del Api Testeado)</i><br>
+├── README.md                                         <i> (Este archivo)</i><br>
+└── TrainTavelAPI.postman_collection.json / etc.       <i> (Json de las Variables)</i><br>
 
 
 <h2>Casos Ejecutados</h2>
