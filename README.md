@@ -8,14 +8,14 @@
 Este es el Repositorio del Challenger - Diplomatura
 
 
-DOCUMENTACIÓN DE LA API
+<h2>DOCUMENTACIÓN DE LA API</h2>
 
 https://github.com/bump-sh-examples/train-travel-api
 
 ![image](https://github.com/user-attachments/assets/61e3a4aa-45f6-4cbd-a58f-465877454b91)
 
 
-Link del Jira
+<h2>Link del Jira</h2>
 
 https://actividad4.atlassian.net/jira/software/projects/LC/boards/269
 <hr>
